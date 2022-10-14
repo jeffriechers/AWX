@@ -2,7 +2,7 @@
 - hosts: all
   tasks:
   - name: Install Admin Tools
-    win_chocolatey:
+    chocolatey.chocolatey.win_chocolatey:
         name: '{{ item }}'
         state: present
         pinned: yes
