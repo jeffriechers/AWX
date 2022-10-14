@@ -1,5 +1,7 @@
 ---
 - hosts: all
+  collections:
+    - chocolatey.chocolatey.win_chocolatey
   tasks:
   - name: Install Admin Tools
     chocolatey.chocolatey.win_chocolatey:
