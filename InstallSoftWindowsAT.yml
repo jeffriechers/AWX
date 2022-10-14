@@ -1,0 +1,18 @@
+---
+- hosts: all
+  tasks:
+  - name: Install Admin Tools
+    win_chocolatey:
+        name: '{{ item }}'
+        state: present
+        pinned: yes
+        architecture: x86
+        force: yes
+    with_items:
+    - 7zip
+    - procexp
+    - putty
+    - notepadplusplus.install
+    - windirstat
+    - git
+    - winscp
