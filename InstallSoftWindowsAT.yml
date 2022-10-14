@@ -1,13 +1,12 @@
 ---
 - hosts: all
   tasks:
-    import_role:
-      name: chocolatey.chocolatey:
-        win_chocolatey:
-          name: '{{ item }}'
-          state: present
-          pinned: yes
-          architecture: x86
-          force: yes
-      with_items:
-      - winscp
+  - name: Install Admin Tools
+    win_chocolatey:
+        name: '{{ item }}'
+        state: present
+        pinned: yes
+        architecture: x86
+        force: yes
+    with_items:
+    - winscp
