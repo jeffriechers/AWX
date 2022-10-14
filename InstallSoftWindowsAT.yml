@@ -1,10 +1,9 @@
 ---
 - hosts: all
-  collections:
-    - chocolatey.chocolatey.win_chocolatey
+  collections: name: chocolatey.chocolatey:
   tasks:
   - name: Install Admin Tools
-    chocolatey.chocolatey.win_chocolatey:
+    win_chocolatey:
         name: '{{ item }}'
         state: present
         pinned: yes
