@@ -9,10 +9,4 @@
         architecture: x86
         force: yes
     with_items:
-    - 7zip
-    - procexp
-    - putty
-    - notepadplusplus.install
-    - windirstat
-    - git
     - winscp
