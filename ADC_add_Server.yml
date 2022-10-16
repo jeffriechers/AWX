@@ -1,6 +1,5 @@
 ---
 - name: Configure ADC
-  hosts: citrix_adc
   collections:
     - citrix.adc
 
