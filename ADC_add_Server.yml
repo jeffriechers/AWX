@@ -14,9 +14,9 @@
         nitro_pass: "{{ nitro_pass }}"
         validate_certs: no
 
-      endpoint: interface
-        args:
-          id: LO/1
-        nitro_info_key: Interface
+        endpoint: interface
+          args:
+           id: LO/1
+          nitro_info_key: Interface
 
       register: result
