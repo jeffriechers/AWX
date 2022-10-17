@@ -1,0 +1,18 @@
+---
+- name: Create a Server 2022 VM from a template
+  hosts: localhost
+  gather_facts: no
+  tasks:
+  - name: Clone the template
+    vmware_guest:
+      hostname: "{{ vcenter_ip }}"
+      username: "{{ vcenter_username }}"
+      password: "{{ vcenter_password }}"
+      validate_certs: False
+      name: "{{ vm_name }}"
+      template: "Server 2022 Template"
+      datacenter: "{{ datacenter_name }}"
+      folder: /AnsibleBuilt
+      state: poweredon
+      cluster: "{{ cluster_name }}"
+      wait_for_ip_address: yes
