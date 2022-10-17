@@ -2,3 +2,8 @@
 collections:
   - name: chocolatey.chocolatey
   - name: citrix.adc
+  - name: citrix.adm
+  - name: community.vmware
+  - name: ctxcommunity.pvs
+  - name: community.windows
+  - name: azure.azcollection  
