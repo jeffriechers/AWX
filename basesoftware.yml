@@ -1,0 +1,27 @@
+---
+- hosts: all
+  tasks:
+  - name: Install multiple packages
+    win_chocolatey:
+      name: '{{ item }}'
+      state: present
+    with_items:
+    - googlechrome
+    - firefox
+    - fslogix
+    - fslogix-rule
+    - notepadplusplus
+    - citrix-workspace
+    - winscp
+    - putty
+    - 7zip
+  
+  - name: Install Machine Wide Teams
+    win_chocolatey:
+      name: microsoft-teams.install
+      package_params: '"/AllUsers /NoAutoStart /AllUser"'
+	
+  - name: OneDrive All Users
+    win_chocolatey:
+      name: microsoft-teams.install
+      package_params: '"/allusers"'
