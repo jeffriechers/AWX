@@ -15,13 +15,4 @@
     - winscp
     - putty
     - 7zip
-  
-  - name: Install Machine Wide Teams
-    win_chocolatey:
-      name: microsoft-teams.install
-      package_params: '"/AllUsers /NoAutoStart /AllUser"'
-	
-  - name: OneDrive All Users
-    win_chocolatey:
-      name: microsoft-teams.install
-      package_params: '"/allusers"'
+
